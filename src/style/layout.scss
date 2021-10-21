@@ -200,9 +200,9 @@
 
   &__logo {
     background-image: var(--company-logo);
-    background-size: auto 50px;
+    background-size: auto var(--company-logo-size);
     background-repeat: no-repeat;
-    height: 50px;
+    height: var(--company-logo-size);
     width: 300px;
     flex-grow: 1;
   }
