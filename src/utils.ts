@@ -357,7 +357,7 @@ export const getUniqueID = (
 //   return getUniqueID(item.address, item.tokenId, getLendingId(item));
 // };
 
-export const filterByCompany = (): ((v) => boolean) => {
+export const filterByCompany = (): ((v: any) => boolean) => {
   if (process.env.NEXT_PUBLIC_NETWORK_SUPPORTED !== "mainnet") {
     return () => true;
   } else if (process.env.NEXT_PUBLIC_FILTER_COMPANY === "animetas") {
