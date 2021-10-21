@@ -21,6 +21,7 @@ export const Header: React.FC = () => {
         : typeof window?.web3 === "undefined" &&
           typeof window?.ethereum === "undefined";
     return noProvider;
+    //eslint-disable-next-line
   }, [typeof window]);
 
   useEffect(() => {
