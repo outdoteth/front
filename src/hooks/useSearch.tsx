@@ -27,7 +27,7 @@ export const useSearchNfts = create<NftSearchState>(
         produce((state) => {
           state.nfts = nfts.map((n) => n.nId);
         })
-      )
+      ),
   }))
 );
 
@@ -60,16 +60,6 @@ export const sortByCollateral =
     b: T & { priceInUSD: number; collateralInUSD: number }
   ) => {
     const result = compare(a.collateralInUSD, b.collateralInUSD);
-    return dir !== "desc" ? result : result * -1;
-  };
-
-export const sortByLentAt =
-  <T extends Lending | Renting>(dir: "asc" | "desc" = "asc") =>
-  (
-    a: T & { priceInUSD: number; collateralInUSD: number },
-    b: T & { priceInUSD: number; collateralInUSD: number }
-  ) => {
-    const result = compare(a.lending?.lentAt || Date.now(), b.lending?.lentAt || Date.now());
     return dir !== "desc" ? result : result * -1;
   };
 
@@ -236,7 +226,7 @@ export const useSearchOptions = (): CategoryOptions[] => {
           arr.push({
             value: meta.collection.name,
             label: meta.collection.name,
-            imageUrl: meta.collection.imageUrl
+            imageUrl: meta.collection.imageUrl,
           });
         }
       } else {

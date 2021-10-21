@@ -66,7 +66,6 @@ export interface ILending {
   rentClaimed: boolean;
   is721: boolean;
   renting?: IRenting;
-  lentAt: number;
 }
 
 export type LendingRaw = {
@@ -81,7 +80,6 @@ export type LendingRaw = {
   rentClaimed: boolean;
   is721: boolean;
   renting: RentingRaw[];
-
 };
 
 export interface IRenting {
